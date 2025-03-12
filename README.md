@@ -1,47 +1,41 @@
-About Me
+MySQL Portfolio Project: IBM Employee Attrition Analysis
 
-📊 Data Analyst | Insight-Driven Decision Maker | SQL | Python | Machine Learning
+Project Overview
 
-Welcome! I am a data analyst passionate about transforming raw data into meaningful insights that drive business decisions. With expertise in SQL, Python, Excel, and data visualization tools, I specialize in cleaning, analyzing, and interpreting data to uncover trends and patterns.
+This project analyzes the IBM Employee Attrition and Performance dataset using MySQL. The dataset contains HR-related information such as employee salaries, promotions, attrition status, and performance metrics. The goal is to showcase data ingestion, cleaning, and querying techniques for HR analytics.
 
-🔹 What I Do
+Folder Structure
 
-Data Analysis & Visualization: Using Python (Pandas, Matplotlib, Seaborn) and Power BI/Tableau to create interactive reports and dashboards.
+MySQL-Portfolio/
+│── README.md          # Project Overview
+│── datasets/
+│   ├── raw_data.csv   # Original dataset
+│── database/
+│   ├── data_import.sql # SQL script for loading data
+│── queries/
+│   ├── data_cleaning.sql # Data cleaning operations
+│   ├── stored_procedures.sql # Stored procedures for analysis
+│── results/
+│   ├── cleaned_data.csv # Output after data processing
+│── documentation/
+│   ├── project_report.md # Explanation of findings
 
-SQL & Database Management: Writing complex queries, optimizing performance, and managing relational databases.
+How to Use
 
-Machine Learning & Predictive Analytics: Building models for classification, regression, and clustering to extract valuable insights.
+Set up the database using data_import.sql.
 
-Business Intelligence & Reporting: Delivering actionable recommendations through data storytelling.
+Clean the data using data_cleaning.sql.
 
-📂 Projects
+Run stored procedures from stored_procedures.sql.
 
-Here are some of the key projects in my portfolio:
+Analyze data with various queries to generate HR insights.
 
-Project 1: Sales Performance Dashboard – Analyzed sales trends using SQL and Power BI.
+Key Insights
 
-Project 2: Customer Churn Prediction – Built a predictive model to identify at-risk customers.
+Attrition trends: Understanding why employees leave.
 
-Project 3: SQL Data Exploration – Performed in-depth data analysis using MySQL.
+Salary distribution across departments and job roles.
 
-🔧 Technical Skills
+Promotion rates and their impact on retention.
 
-Programming: Python (Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn)
-
-Databases: MySQL, PostgreSQL, SQLite
-
-Data Visualization: Tableau, Power BI, Excel
-
-Machine Learning: Regression, Classification, Clustering
-
-Other Tools: Git/GitHub, Jupyter Notebook, Google Sheets
-
-📞 Let's Connect!
-
-I am always open to discussing data-driven solutions, collaborations, and new opportunities. Feel free to reach out:
-
-LinkedIn: Your Profile
-
-Email: azeezbasit57email@example.com
-
-GitHub: Your GitHub Profile
+Employee satisfaction and performance correlation.
