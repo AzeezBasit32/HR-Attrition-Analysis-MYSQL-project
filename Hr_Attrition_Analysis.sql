@@ -145,10 +145,4 @@ GROUP BY gender;
 
 -- 🔍 Insight: Identifies if gender plays a role in employee attrition.
 
-----------------------------------------------------------
-
--- 🔥 FINAL INSIGHTS 🔥
--- ✅ This script provides a detailed **HR Analytics Report** covering attrition, salaries, work-life balance, and more.
--- ✅ It helps HR teams **optimize employee retention and performance strategies**.
--- ✅ The results can be **visualized using BI tools** like Power BI or Tableau for better insights.
-
+-------------------------------------------------------
