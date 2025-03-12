@@ -2,17 +2,9 @@
 
 SET SQL_SAFE_UPDATES = 0;
 
-ALTER TABLE ibm_hr 
-MODIFY COLUMN employee_id INT,
-MODIFY COLUMN age INT,
-MODIFY COLUMN distance_from_home INT,
-MODIFY COLUMN monthly_income DECIMAL(10,2),
-MODIFY COLUMN num_companies_worked INT,
-MODIFY COLUMN percent_salary_hike INT,
-MODIFY COLUMN training_times_last_year INT;
-
 -- Fill or remove NULLs based on logical assumptions.
 -- Replace NULLs in categorical columns with 'Unknown'
+
 UPDATE ibm_hr
 SET business_travel = COALESCE(business_travel, 'Unknown'),
     department = COALESCE(department, 'Unknown'),
