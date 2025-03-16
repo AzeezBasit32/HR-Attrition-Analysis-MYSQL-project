@@ -1,4 +1,4 @@
-employee_number,age,attrition,business_travel,department,distance_from_home,education,education_field,environment_satisfaction,gender,job_involvement,job_role,job_satisfaction,marital_status,monthly_income,num_companies_worked,over_time,percent_salary_hike,performance_rating,relationship_satisfaction,training_times_last_year,work_life_balance,
+temployee_number,age,attrition,business_travel,department,distance_from_home,education,education_field,environment_satisfaction,gender,job_involvement,job_role,job_satisfaction,marital_status,monthly_income,num_companies_worked,over_time,percent_salary_hike,performance_rating,relationship_satisfaction,training_times_last_year,work_life_balance,
 1,41,Yes,Travel_Rarely,Sales,1,Some college,Life Sciences,Medium,Female,High,Sales Executive,Very high,Single,5993,8,Yes,11,Excellent,Low,0,Bad,
 2,49,No,Travel_Frequently,Research & Development,8,No college,Life Sciences,High,Male,Medium,Research Scientist,Medium,Married,5130,1,No,23,Outstanding,Very high,3,Better,
 4,37,Yes,Travel_Rarely,Research & Development,2,Some college,Other,Very high,Male,Medium,Laboratory Technician,High,Single,2090,6,Yes,15,Excellent,Medium,3,Better,
