@@ -45,11 +45,6 @@ The dataset was imported into MySQL using `data_import.sql`. The SQL script incl
 - Data type assignments
 - Bulk insertion of CSV data
 
-**Command to run:**
-```sh
-mysql -u your_user -p your_database < database/data_import.sql
-```
-
 ---
 
 ### **2. Data Cleaning & Preprocessing**
@@ -58,67 +53,35 @@ The `data_cleaning.sql` script was used to:
 - Standardize categorical variables
 - Convert the `Attrition` column to binary values (0 = No, 1 = Yes)
 - Handle missing values
-
-**Key SQL Queries:**
-```sql
-UPDATE employee_attrition SET Attrition = CASE WHEN Attrition = 'Yes' THEN 1 ELSE 0 END;
-DELETE FROM employee_attrition WHERE Employee_ID IS NULL;
-```
-
+ 
 ---
 
 ### **3. Data Analysis & Key Insights**
-Several SQL queries were performed to analyze trends in attrition.
-
-#### **Attrition by Department**
-```sql
-SELECT Department, COUNT(*) AS Total_Employees,
-SUM(CASE WHEN Attrition = 1 THEN 1 ELSE 0 END) AS Attrition_Count,
-ROUND((SUM(CASE WHEN Attrition = 1 THEN 1 ELSE 0 END) / COUNT(*)) * 100, 2) AS Attrition_Rate
-FROM employee_attrition
-GROUP BY Department
-ORDER BY Attrition_Rate DESC;
-```
-
-#### **Attrition by Job Role**
-```sql
-SELECT Job_Role, COUNT(*) AS Total_Employees,
-SUM(CASE WHEN Attrition = 1 THEN 1 ELSE 0 END) AS Attrition_Count,
-ROUND((SUM(CASE WHEN Attrition = 1 THEN 1 ELSE 0 END) / COUNT(*)) * 100, 2) AS Attrition_Rate
-FROM employee_attrition
-GROUP BY Job_Role
-ORDER BY Attrition_Rate DESC;
-```
-
-These queries help identify which departments and job roles have the highest attrition rates.
+Several SQL queries were performed to analyze trends in attrition including
+ 1️⃣ EMPLOYEE ATTRITION OVERVIEW  
+ 2️⃣ ATTRITION BY AGE GROUP  
+ 3️⃣ SALARY DISTRIBUTION BY JOB ROLE 
+ 3️⃣ SALARY DISTRIBUTION BY JOB ROLE
+ 5️⃣ IMPACT OF WORK-LIFE BALANCE ON ATTRITION  
+ 6️⃣ RELATIONSHIP BETWEEN PERFORMANCE RATING AND SALARY HIKE
+ 7️⃣ IMPACT OF TRAINING ON EMPLOYEE RETENTION
+ 8️⃣ JOB SATISFACTION VS ATTRITION  
+ 9️⃣ GENDER-BASED ATTRITION ANALYSIS
 
 ---
 
 ### **4. Stored Procedures for Automation**
 The `stored_procedures.sql` script includes automated data retrieval functions.
 
-**Example Procedure: Get Attrition Summary by Department**
-```sql
-DELIMITER $$
-CREATE PROCEDURE GetAttritionByDepartment()
-BEGIN
-    SELECT Department, COUNT(*) AS Total_Employees,
-    SUM(CASE WHEN Attrition = 1 THEN 1 ELSE 0 END) AS Attrition_Count,
-    ROUND((SUM(CASE WHEN Attrition = 1 THEN 1 ELSE 0 END) / COUNT(*)) * 100, 2) AS Attrition_Rate
-    FROM employee_attrition
-    GROUP BY Department
-    ORDER BY Attrition_Rate DESC;
-END $$
-DELIMITER ;
-```
-
-Run the procedure:
-```sql
-CALL GetAttritionByDepartment();
-```
-
----
-
+### **4. Views for repetition avoidance**
+The Views.sql script contains queries for easy and automatic data retrieval. the script include codes t0 retrieve
+    1. Employee Attrition Summary
+    2. Attrition by Department
+    3. Attrition by Job Role
+    4. Attrition by Job Satisfaction
+    5. Attrition by Age Group
+    6. Attrition by Monthly Income Level
+    
 ## **How to View the Results**
 - The cleaned dataset is saved as `cleaned_data.csv` in the `results/` folder.
 - The analysis queries and stored procedures can be executed in MySQL to generate insights.
@@ -137,11 +100,8 @@ This project demonstrates the practical application of **SQL for HR analytics**,
 
 ---
 
-## **Next Steps**
-- Expand the dataset with external HR factors (e.g., employee satisfaction surveys).
-- Implement machine learning models to predict attrition risk.
-- Integrate the SQL pipeline with visualization tools (e.g., Power BI, Tableau).
+## ** DISCLAIMER** 
+The data used in the execution of this data is a synthetic data created by IBM data scientist. Hence, no business decisions or conclusions should be made based on its results 
 
-## ** DISCLAIMER**: The data used in the execution of this data is a synthetic data created by IBM data scientist. Hence, no business decisions or conclusions should be made based on its results 
---
+---
 
